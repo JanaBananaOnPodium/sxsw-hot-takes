@@ -356,9 +356,9 @@ function SwipeCard({
         MID
       </motion.div>
 
-      {/* Topic label — magazine cover style */}
-      <div className="absolute inset-0 flex items-center justify-center p-8">
-        <h2 className="font-serif font-black text-display text-white text-center whitespace-pre-line drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
+      {/* Topic label — magazine cover style, auto-scales to fit */}
+      <div className="absolute inset-0 flex items-center justify-center px-6 py-8">
+        <h2 className="font-serif font-black text-[clamp(2rem,10vw,3.5rem)] leading-[1.05] tracking-tight text-white text-center whitespace-pre-line drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
           {card.topic}
         </h2>
       </div>

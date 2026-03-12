@@ -20,19 +20,19 @@ export default function Leaderboard() {
   }, [])
 
   return (
-    <div className="min-h-dvh bg-white px-5 py-8">
-      <a href="/" className="font-serif text-body text-black/40 underline">
+    <div className="min-h-dvh bg-white px-6 py-10">
+      <a href="/" className="font-serif text-body text-black/35 underline underline-offset-4">
         &larr; Back
       </a>
 
-      <h1 className="font-serif font-black text-display text-black mt-6">
-        LEADER&shy;BOARD
+      <h1 className="font-serif font-black text-[clamp(2rem,8vw,3.5rem)] leading-[1.05] tracking-tight text-black mt-8">
+        SXSW HOT TAKES
       </h1>
-      <p className="font-serif text-body text-red-brand mt-1 tracking-widest uppercase">
-        SXSW Hot Takes 2026
+      <p className="font-serif font-bold text-heading text-red-brand mt-2 tracking-widest uppercase">
+        LEADERBOARD
       </p>
 
-      <div className="mt-8 no-scrollbar">
+      <div className="mt-10 no-scrollbar">
         {loading ? (
           <p className="font-serif text-body text-black/40">Loading...</p>
         ) : entries.length === 0 ? (
@@ -42,7 +42,7 @@ export default function Leaderboard() {
             {entries.map((entry, i) => (
               <li
                 key={entry.userId}
-                className="flex items-baseline justify-between py-4 border-b border-black/10"
+                className="flex items-baseline justify-between py-5 border-b border-black/5"
               >
                 <div className="flex items-baseline gap-4">
                   <span
