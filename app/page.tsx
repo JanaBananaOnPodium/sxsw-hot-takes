@@ -93,7 +93,7 @@ export default function Home() {
         } else {
           setIndex((i) => i + 1)
         }
-      }, 1000)
+      }, 750)
     },
     [index, showResult, userId, name],
   )
