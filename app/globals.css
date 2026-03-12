@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow: hidden;
+  height: 100dvh;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Retro grain overlay */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+}
+
+/* Retro warm tint on card images */
+.card-image {
+  filter: sepia(0.2) saturate(0.85) brightness(0.7) contrast(1.1);
+}
+
+/* Fire/mid swipe indicators */
+.swipe-indicator {
+  transition: opacity 150ms ease;
+}
+
+/* Smooth result bar animation */
+.result-bar {
+  transition: width 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* No scrollbar on leaderboard */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
