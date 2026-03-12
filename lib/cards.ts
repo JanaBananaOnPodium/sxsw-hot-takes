@@ -17,13 +17,13 @@ export const cards: Card[] = [
   {
     id: 'protein',
     topic: 'PROTEIN',
-    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80',
+    image: '/images/protein.webp',
     gradient: 'linear-gradient(135deg, #2d1b00 0%, #4a2c0a 50%, #1a0f00 100%)',
   },
   {
     id: 'peptides',
     topic: 'PEPTIDES',
-    image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80',
+    image: '/images/peptides.jpg',
     gradient: 'linear-gradient(135deg, #0a192f 0%, #112240 50%, #1d3461 100%)',
   },
   {
