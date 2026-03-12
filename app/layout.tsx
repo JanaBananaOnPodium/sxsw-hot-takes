@@ -3,11 +3,18 @@ import './globals.css'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'SXSW HOT TAKES 2026',
-  description: 'Swipe on the hottest topics at SXSW. Powered by Podium.',
+  title: 'SXSW HOT or NOT — Insider Leaderboard',
+  description: 'Swipe on the hottest topics at SXSW 2026. See what insiders actually think is fire.',
   openGraph: {
-    title: 'SXSW HOT TAKES 2026',
-    description: 'What does SXSW actually think is hot? Swipe to vote.',
+    title: 'SXSW HOT or NOT',
+    description: 'Insider leaderboard. Swipe right if it\'s fire. Left if it\'s mid.',
+    siteName: 'SXSW HOT or NOT',
+    url: 'https://sxswhotornot.com',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SXSW HOT or NOT',
+    description: 'Insider leaderboard. Swipe right if it\'s fire. Left if it\'s mid.',
   },
 }
 
@@ -21,7 +28,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="font-sans bg-white text-black">
         {children}
         <Script
